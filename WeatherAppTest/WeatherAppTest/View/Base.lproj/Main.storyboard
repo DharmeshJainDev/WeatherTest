@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lYU-gk-xGA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="Rrd-rJ-b7R">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" id="lYU-gk-xGA" customClass="WeatherViewController" customModule="WeatherAppTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DeA-xw-JSy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-98-uw8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="95"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="eXm-w0-UYU"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kal-OH-Tpa">
+                                <rect key="frame" x="0.0" y="95" width="393" height="723"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oyY-yg-4eU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kal-OH-Tpa" firstAttribute="top" secondItem="4O3-98-uw8" secondAttribute="bottom" id="0Qp-8W-ffC"/>
+                            <constraint firstItem="4O3-98-uw8" firstAttribute="top" secondItem="DeA-xw-JSy" secondAttribute="top" id="2MH-so-OQ8"/>
+                            <constraint firstItem="4O3-98-uw8" firstAttribute="leading" secondItem="oyY-yg-4eU" secondAttribute="leading" id="6I6-l2-WD1"/>
+                            <constraint firstItem="oyY-yg-4eU" firstAttribute="trailing" secondItem="kal-OH-Tpa" secondAttribute="trailing" id="IGk-uC-yk7"/>
+                            <constraint firstItem="oyY-yg-4eU" firstAttribute="bottom" secondItem="kal-OH-Tpa" secondAttribute="bottom" id="U8J-ew-dcC"/>
+                            <constraint firstItem="oyY-yg-4eU" firstAttribute="trailing" secondItem="4O3-98-uw8" secondAttribute="trailing" id="mxA-04-bMI"/>
+                            <constraint firstItem="kal-OH-Tpa" firstAttribute="leading" secondItem="oyY-yg-4eU" secondAttribute="leading" id="sF1-IH-oF9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBarView" destination="4O3-98-uw8" id="Wno-Jy-fZI"/>
+                        <outlet property="tableView" destination="kal-OH-Tpa" id="Edi-iP-apJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sgi-W7-14C" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
